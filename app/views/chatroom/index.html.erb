@@ -1,5 +1,8 @@
 <h2 class="ui center aligned medium icon header">
-  <i class="soundcloud icon"></i>
+  <%# Works %>
+  <%= fa_icon "soundcloud", class: "fa-2x" %>
+  <%# Doesn't work %>
+  <%= semantic_icon('soundcloud') %>
   <div class="content">Say something</div>
 </h2>
 
@@ -18,7 +21,7 @@
                 <div class="date">1 Hour Ago</div>
               </div>
               <div class="meta">
-                <a class="like"> <i class="like icon"></i> 4 Likes </a>
+                <a class="like"> <%= fa_icon "heart" %> 4 Likes </a>
               </div>
             </div>
           </div>
@@ -32,7 +35,7 @@
                 <div class="date">4 days ago</div>
               </div>
               <div class="meta">
-                <a class="like"> <i class="like icon"></i> 1 Like </a>
+                <a class="like"> <%= fa_icon "heart" %> 1 Like </a>
               </div>
             </div>
           </div>
@@ -46,7 +49,7 @@
                 <div class="date">2 Days Ago</div>
               </div>
               <div class="meta">
-                <a class="like"> <i class="like icon"></i> 8 Likes </a>
+                <a class="like"> <%= fa_icon "heart" %> 8 Likes </a>
               </div>
             </div>
           </div>
@@ -66,7 +69,7 @@
                 of the same another day soon.
               </div>
               <div class="meta">
-                <a class="like"> <i class="like icon"></i> 5 Likes </a>
+                <a class="like"> <%= fa_icon "heart" %> 5 Likes </a>
               </div>
             </div>
           </div>
@@ -80,7 +83,7 @@
                 <div class="date">4 days ago</div>
               </div>
               <div class="meta">
-                <a class="like"> <i class="like icon"></i> 41 Likes </a>
+                <a class="like"> <%= fa_icon "heart" %> 41 Likes </a>
               </div>
             </div>
           </div>
@@ -91,7 +94,8 @@
           <div class="field">
             <div class="ui fluid icon input">
               <input type="text" placeholder="Your message" />
-              <i class="bordered inverted send icon"></i>
+              <%= fa_icon "bordered inverted send", class: "fa-2x" %>
+              <%# <i class="bordered inverted send icon"></i> %>
             </div>
           </div>
         </div>
