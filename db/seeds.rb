@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(username: 'Luke', password: 'password')
-User.create(username: 'Mike', password: 'password')
-User.create(username: 'Janet', password: 'password')
-User.create(username: 'Maria', password: 'password')
-User.create(username: 'Dave', password: 'password')
+%w[Luke Mike Janet Maria Dave].each do |username|
+  User.create(username: username, password: 'password')
+end
