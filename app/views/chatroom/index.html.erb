@@ -12,14 +12,14 @@
         </div>
       </div>
       <div class="extra content">
-        <div class="ui form">
+        <%= form_with model: @message, url: messages_path, class: "ui form", method: :post do |form| %>
           <div class="field">
             <div class="ui fluid icon input">
-              <input type="text" placeholder="Your message" />
-              <i class="bordered inverted send icon"></i>
+              <%= form.text_field :body, placeholder: "Your message" %>
+              <%= form.button '<i class="bordered inverted send icon"></i>'.html_safe %>
             </div>
           </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
