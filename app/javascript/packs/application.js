@@ -14,9 +14,26 @@ Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
 
+export const scroll_bottom = () => {
+  if ($("#messages").length > 0) {
+    $("#messages").scrollTop($("#message-container")[0].scrollHeight);
+  }
+}
+
+const submit_message = () => { 
+  $("#message_body").on("keydown", (e) => {
+    if (e.key === 'Enter') {
+      $("button").click();
+      e.target.value = "";
+    }
+  });
+}
+
 $(document).on("turbolinks:load", function functionName() {
   $(".ui.dropdown").dropdown();
   $(".message .close").on("click", function () {
     $(this).closest(".message").transition("fade");
   });
+  scroll_bottom();
+  submit_message();
 });
