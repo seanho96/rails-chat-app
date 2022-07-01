@@ -15,8 +15,8 @@ Turbolinks.start();
 ActiveStorage.start();
 
 export const scroll_bottom = () => {
-  if ($("#messages").length > 0) {
-    $("#messages").scrollTop($("#message-container")[0].scrollHeight);
+  if ($(".chatroom-messages").length > 0) {
+    $(".chatroom-messages").scrollTop($(".chatroom-message-container")[0].scrollHeight);
   }
 }
 
