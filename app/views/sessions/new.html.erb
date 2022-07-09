@@ -27,11 +27,34 @@
       <% end %>
     </div>
     <div class="middle aligned column">
-      <div class="ui big orange disabled button">
+      <div class="ui big orange button signup-modal-button">
         <i class="signup icon"></i>
         Sign up
       </div>
     </div>
   </div>
   <div class="ui vertical divider">Or</div>
+</div>
+
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Sign up here
+  </div>
+
+  <div class="content">
+    <%= form_for(:signup, html: {class: "ui form", role: "form"}, url: signup_path, method: 'post') do |f| %>
+      <div class="field">
+        <%= f.label :username %>
+        <%= f.text_field :username, placeholder: "Your username" %>
+      </div>
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password, placeholder: "Your password" %>
+      </div>
+        <%= f.button "Sign up", class:"ui button"  %>
+    <% end %>
+
+  </div>
+
 </div>
