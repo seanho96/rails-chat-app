@@ -1,5 +1,5 @@
-import consumer from "./consumer"
-import { scroll_bottom } from '../packs/application';
+import consumer from "./consumer";
+import { scroll_bottom } from "../packs/application";
 
 consumer.subscriptions.create("ChatroomChannel", {
   connected() {
@@ -11,7 +11,7 @@ consumer.subscriptions.create("ChatroomChannel", {
   },
 
   received(data) {
-    $('#message-container').append(data.body)
-    scroll_bottom()
-  }
+    $(".chatroom-message-container").append(data.body);
+    scroll_bottom();
+  },
 });
