@@ -98,7 +98,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # WebSockets
-  config.web_socket_server_url = 'wss://rails-chatroom.herokuapp.com/api/v1/cable'
+  config.web_socket_server_url = 'wss://rails-chatroom.herokuapp.com/cable'
   config.action_cable.allowed_request_origins = ['https://rails-chatroom.herokuapp.com', 'http://rails-chatroom.herokuapp.com']
 
   # Inserts middleware to perform automatic connection switching.
