@@ -98,7 +98,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Action Cable config
-  config.action_cable.url = 'wss://rails-chatroom.herokuapp.com/cable'
+  config.web_socket_server_url = 'wss://rails-chatroom.herokuapp.com/cable'
   config.action_cable.allowed_request_origins = ['https://rails-chatroom.herokuapp.com', 'http://rails-chatroom.herokuapp.com']
   # config.web_socket_server_url = 'wss://rails-chatroom.herokuapp.com/cable'
 
